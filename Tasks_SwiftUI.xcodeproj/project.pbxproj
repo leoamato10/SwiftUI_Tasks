@@ -16,6 +16,7 @@
 		AA0000000000000000000031 /* CalendarWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000021 /* CalendarWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		AA0000000000000000000051 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000050 /* WidgetKit.framework */; };
 		AA0000000000000000000053 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000052 /* SwiftUI.framework */; };
+		AA0000000000000000000055 /* AppIntents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000054 /* AppIntents.framework */; };
 		CE1FB8C922F4147900ADC538 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1FB8C822F4147900ADC538 /* Assets.xcassets */; };
 		CE1FB8CC22F4147900ADC538 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1FB8CB22F4147900ADC538 /* Preview Assets.xcassets */; };
 		CE1FB8CF22F4147900ADC538 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1FB8CD22F4147900ADC538 /* LaunchScreen.storyboard */; };
@@ -55,6 +56,7 @@
 		AA0000000000000000000021 /* CalendarWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CalendarWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA0000000000000000000050 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		AA0000000000000000000052 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		AA0000000000000000000054 /* AppIntents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppIntents.framework; path = System/Library/Frameworks/AppIntents.framework; sourceTree = SDKROOT; };
 		CE1FB8BC22F4147400ADC538 /* Tasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tasks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE1FB8C822F4147900ADC538 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE1FB8CB22F4147900ADC538 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 			files = (
 				AA0000000000000000000051 /* WidgetKit.framework in Frameworks */,
 				AA0000000000000000000053 /* SwiftUI.framework in Frameworks */,
+				AA0000000000000000000055 /* AppIntents.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +100,7 @@
 			children = (
 				AA0000000000000000000050 /* WidgetKit.framework */,
 				AA0000000000000000000052 /* SwiftUI.framework */,
+				AA0000000000000000000054 /* AppIntents.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

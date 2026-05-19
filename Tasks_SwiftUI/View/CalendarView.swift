@@ -1,20 +1,25 @@
 import SwiftUI
 
+enum CalendarStyle {
+    case adaptive
+    case minimal
+}
+
+private let spanishLocale = Locale(identifier: "es_ES")
+
+private let spanishCalendar: Calendar = {
+    var cal = Calendar(identifier: .gregorian)
+    cal.locale = spanishLocale
+    cal.firstWeekday = 2 // Lunes
+    return cal
+}()
+
 struct CalendarView: View {
     let date: Date
-
-    private var spanishCalendar: Calendar {
-        var cal = Calendar(identifier: .gregorian)
-        cal.locale = Locale(identifier: "es_ES")
-        cal.firstWeekday = 2 // Lunes
-        return cal
-    }
+    var style: CalendarStyle = .adaptive
 
     private var monthTitle: String {
-        let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "es_ES")
-        formatter.dateFormat = "MMMM"
-        return formatter.string(from: date).uppercased()
+        date.formatted(.dateTime.month(.wide).locale(spanishLocale)).uppercased()
     }
 
     private let weekdaySymbols = ["L", "M", "M", "J", "V", "S", "D"]
@@ -43,6 +48,14 @@ struct CalendarView: View {
         }
     }
 
+    private var titleColor: Color {
+        style == .minimal ? Color.red.opacity(0.65) : .red
+    }
+
+    private var weekdayHeaderColor: Color {
+        style == .minimal ? Color.white.opacity(0.45) : .primary
+    }
+
     var body: some View {
         GeometryReader { geo in
             let columns = 7
@@ -57,14 +70,14 @@ struct CalendarView: View {
             VStack(alignment: .leading, spacing: 0) {
                 Text(monthTitle)
                     .font(.system(size: titleHeight * 0.62, weight: .bold, design: .rounded))
-                    .foregroundColor(.red)
+                    .foregroundStyle(titleColor)
                     .frame(height: titleHeight, alignment: .bottomLeading)
 
                 HStack(spacing: 0) {
                     ForEach(0..<columns, id: \.self) { idx in
                         Text(weekdaySymbols[idx])
                             .font(.system(size: dayFontSize, weight: .semibold, design: .rounded))
-                            .foregroundColor(.primary)
+                            .foregroundStyle(weekdayHeaderColor)
                             .frame(width: cellWidth, height: weekdayHeight)
                     }
                 }
@@ -77,7 +90,8 @@ struct CalendarView: View {
                                 today: date,
                                 isWeekendColumn: dayIdx >= 5,
                                 fontSize: dayFontSize,
-                                circleSize: circleSize
+                                circleSize: circleSize,
+                                style: style
                             )
                             .frame(width: cellWidth, height: rowHeight)
                         }
@@ -94,44 +108,67 @@ private struct DayCell: View {
     let isWeekendColumn: Bool
     let fontSize: CGFloat
     let circleSize: CGFloat
+    let style: CalendarStyle
 
     private var isToday: Bool {
         guard let date = date else { return false }
-        return Calendar.current.isDate(date, inSameDayAs: today)
+        return spanishCalendar.isDate(date, inSameDayAs: today)
     }
 
     private var dayString: String {
         guard let date = date else { return "" }
-        return String(Calendar.current.component(.day, from: date))
+        return String(spanishCalendar.component(.day, from: date))
     }
 
     var body: some View {
         ZStack {
             if isToday {
-                Circle()
-                    .fill(Color.red)
-                    .frame(width: circleSize, height: circleSize)
+                switch style {
+                case .adaptive:
+                    Circle()
+                        .fill(Color.red)
+                        .frame(width: circleSize, height: circleSize)
+                case .minimal:
+                    Circle()
+                        .stroke(Color.red, lineWidth: max(1.5, circleSize * 0.05))
+                        .frame(width: circleSize, height: circleSize)
+                }
             }
             Text(dayString)
                 .font(.system(size: fontSize, weight: .medium, design: .rounded))
-                .foregroundColor(textColor)
+                .foregroundStyle(textColor)
         }
     }
 
     private var textColor: Color {
-        if isToday { return .white }
         if date == nil { return .clear }
-        return isWeekendColumn ? .secondary : .primary
+        switch style {
+        case .adaptive:
+            if isToday { return .white }
+            return isWeekendColumn ? .secondary : .primary
+        case .minimal:
+            if isToday { return .red }
+            return isWeekendColumn ? Color.white.opacity(0.3) : Color.white.opacity(0.55)
+        }
     }
 }
 
 #if DEBUG
 struct CalendarView_Previews: PreviewProvider {
     static var previews: some View {
-        CalendarView(date: Date())
-            .padding(18)
-            .background(Color(.systemBackground))
-            .previewLayout(.fixed(width: 340, height: 340))
+        Group {
+            CalendarView(date: Date(), style: .adaptive)
+                .padding(18)
+                .background(Color(.systemBackground))
+                .previewLayout(.fixed(width: 340, height: 340))
+                .previewDisplayName("Adaptive")
+
+            CalendarView(date: Date(), style: .minimal)
+                .padding(18)
+                .background(Color.black)
+                .previewLayout(.fixed(width: 340, height: 340))
+                .previewDisplayName("Minimal (OLED)")
+        }
     }
 }
 #endif
