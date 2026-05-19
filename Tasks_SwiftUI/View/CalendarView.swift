@@ -64,7 +64,7 @@ struct CalendarView: View {
                     ForEach(0..<columns, id: \.self) { idx in
                         Text(weekdaySymbols[idx])
                             .font(.system(size: dayFontSize, weight: .semibold, design: .rounded))
-                            .foregroundColor(.white)
+                            .foregroundColor(.primary)
                             .frame(width: cellWidth, height: weekdayHeight)
                     }
                 }
@@ -121,7 +121,7 @@ private struct DayCell: View {
     private var textColor: Color {
         if isToday { return .white }
         if date == nil { return .clear }
-        return isWeekendColumn ? Color(white: 0.45) : .white
+        return isWeekendColumn ? .secondary : .primary
     }
 }
 
@@ -130,7 +130,7 @@ struct CalendarView_Previews: PreviewProvider {
     static var previews: some View {
         CalendarView(date: Date())
             .padding(18)
-            .background(Color.black)
+            .background(Color(.systemBackground))
             .previewLayout(.fixed(width: 340, height: 340))
     }
 }

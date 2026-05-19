@@ -31,7 +31,7 @@ struct CalendarWidgetEntryView: View {
             .padding(.horizontal, 4)
             .padding(.vertical, 2)
             .containerBackground(for: .widget) {
-                Color(white: 0.11)
+                Color(.systemBackground)
             }
     }
 }

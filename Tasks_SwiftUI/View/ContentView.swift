@@ -3,7 +3,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         ZStack {
-            Color.black.ignoresSafeArea()
+            Color(.systemBackground).ignoresSafeArea()
 
             VStack(spacing: 18) {
                 CalendarView(date: Date())
@@ -11,13 +11,13 @@ struct ContentView: View {
                     .padding(18)
                     .background(
                         RoundedRectangle(cornerRadius: 36, style: .continuous)
-                            .fill(Color(white: 0.11))
+                            .fill(Color(.secondarySystemBackground))
                     )
                     .padding(.horizontal, 24)
 
                 Text("Añade el widget «Calendario» a tu pantalla de inicio para verlo en grande (4×4).")
                     .multilineTextAlignment(.center)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.secondary)
                     .font(.footnote)
                     .padding(.horizontal, 32)
             }
