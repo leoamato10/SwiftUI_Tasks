@@ -1,21 +1,24 @@
-# SwiftUI_Tasks
-Tasks is simple ToDo app developed using SwiftUI and Coredata which having features like Add,Delete,Rearrange and send notification based on data and time provided for each tasks.This is a basic app that lets you create a list of todos with specific date and time by user, mark the todos complete and then delete them.It will also send local notification based on the user preference of each tasks.
+# Calendario Widget
 
-<p align="center">
-  <img src="https://github.com/shankarmadeshvaran/SwiftUI_Tasks/blob/master/ToDo-tasks.gif" width="30%"/>
-</p>
+Widget de iPhone construido con SwiftUI + WidgetKit que muestra el mes actual en tamaño grande (4×4), con los nombres de los días en español, el día de hoy resaltado en un círculo rojo y los fines de semana atenuados.
 
-This project was made for fun to try out Swift UI and see how it interacts with other layers of the application now that we don't have view controllers. We're all still learning. This project is merely my attempt to put something together based on the ideas put accross in WWDC videos and in the documentation.
+## Estructura
 
-## Platforms
-Task app will currently run from iOS 13.
-This app is updated for Xcode 11+. I'll be updating the code for upcoming versions also.
+- `Tasks_SwiftUI/` — app contenedora (necesaria para distribuir el widget). Muestra el mismo calendario para previsualización.
+  - `App.swift` — punto de entrada SwiftUI (`@main`).
+  - `View/ContentView.swift` — pantalla de la app.
+  - `View/CalendarView.swift` — vista de calendario compartida con el widget.
+- `CalendarWidget/` — *Widget Extension*.
+  - `CalendarWidget.swift` — `TimelineProvider` + `Widget` (`.systemLarge`).
+  - `Info.plist` — declara `NSExtensionPointIdentifier = com.apple.widgetkit-extension`.
 
-## Issues
-This task app having design issues and I'm still adding features , updating and fixing bugs whenever I came across.
+## Requisitos
 
-## More Updates
-Follow me on [Twitter](https://twitter.com/devinmaking) and [LinkedIn](https://www.linkedin.com/in/shankar-mathesh/) to get the latest update about features, code and more. Consider star the repo if you like it. 
+- Xcode 15+
+- iOS 17+ (usa `containerBackground(for:)`)
 
+## Cómo usarlo
 
-
+1. Abre `Tasks_SwiftUI.xcodeproj` en Xcode.
+2. Ejecuta el esquema `Tasks_SwiftUI` en un simulador o dispositivo.
+3. En la pantalla de inicio, mantén pulsado → **+** → busca **Calendario** y añade el widget tamaño grande (4×4).

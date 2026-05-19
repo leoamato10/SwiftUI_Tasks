@@ -3,42 +3,75 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE1FB8C022F4147400ADC538 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FB8BF22F4147400ADC538 /* AppDelegate.swift */; };
-		CE1FB8C222F4147400ADC538 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FB8C122F4147400ADC538 /* SceneDelegate.swift */; };
-		CE1FB8C522F4147400ADC538 /* Tasks_SwiftUI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE1FB8C322F4147400ADC538 /* Tasks_SwiftUI.xcdatamodeld */; };
-		CE1FB8C722F4147400ADC538 /* HomeTasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FB8C622F4147400ADC538 /* HomeTasksView.swift */; };
+		AA0000000000000000000002 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000001 /* App.swift */; };
+		AA0000000000000000000004 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000003 /* ContentView.swift */; };
+		AA0000000000000000000006 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000005 /* CalendarView.swift */; };
+		AA0000000000000000000007 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000005 /* CalendarView.swift */; };
+		AA0000000000000000000012 /* CalendarWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000011 /* CalendarWidget.swift */; };
+		AA0000000000000000000015 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000014 /* Assets.xcassets */; };
+		AA0000000000000000000031 /* CalendarWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000021 /* CalendarWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AA0000000000000000000051 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000050 /* WidgetKit.framework */; };
+		AA0000000000000000000053 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000052 /* SwiftUI.framework */; };
 		CE1FB8C922F4147900ADC538 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1FB8C822F4147900ADC538 /* Assets.xcassets */; };
 		CE1FB8CC22F4147900ADC538 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1FB8CB22F4147900ADC538 /* Preview Assets.xcassets */; };
 		CE1FB8CF22F4147900ADC538 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1FB8CD22F4147900ADC538 /* LaunchScreen.storyboard */; };
-		CE1FB8D722F414F600ADC538 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FB8D622F414F600ADC538 /* ToDo.swift */; };
-		CE1FB8D922F4177F00ADC538 /* TaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FB8D822F4177F00ADC538 /* TaskRow.swift */; };
-		CE1FB8DB22F4197600ADC538 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FB8DA22F4197600ADC538 /* Date+Extensions.swift */; };
-		CE1FB8DD22F419A400ADC538 /* AddNewToDoTaskHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FB8DC22F419A400ADC538 /* AddNewToDoTaskHeaderView.swift */; };
-		CE2F880E22F9868300F0A4D9 /* Swift.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2F880D22F9868300F0A4D9 /* Swift.png */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		AA0000000000000000000030 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				AA0000000000000000000031 /* CalendarWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXContainerItemProxy section */
+		AA0000000000000000000041 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE1FB8B422F4147400ADC538 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA0000000000000000000020;
+			remoteInfo = CalendarWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		AA0000000000000000000001 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		AA0000000000000000000003 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AA0000000000000000000005 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		AA0000000000000000000011 /* CalendarWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarWidget.swift; sourceTree = "<group>"; };
+		AA0000000000000000000013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA0000000000000000000014 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA0000000000000000000021 /* CalendarWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CalendarWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA0000000000000000000050 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		AA0000000000000000000052 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		CE1FB8BC22F4147400ADC538 /* Tasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tasks.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE1FB8BF22F4147400ADC538 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE1FB8C122F4147400ADC538 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE1FB8C422F4147400ADC538 /* Tasks_SwiftUI.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tasks_SwiftUI.xcdatamodel; sourceTree = "<group>"; };
-		CE1FB8C622F4147400ADC538 /* HomeTasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTasksView.swift; sourceTree = "<group>"; };
 		CE1FB8C822F4147900ADC538 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE1FB8CB22F4147900ADC538 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CE1FB8CE22F4147900ADC538 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE1FB8D022F4147900ADC538 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE1FB8D622F414F600ADC538 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
-		CE1FB8D822F4177F00ADC538 /* TaskRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRow.swift; sourceTree = "<group>"; };
-		CE1FB8DA22F4197600ADC538 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
-		CE1FB8DC22F419A400ADC538 /* AddNewToDoTaskHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToDoTaskHeaderView.swift; sourceTree = "<group>"; };
-		CE2F880D22F9868300F0A4D9 /* Swift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Swift.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AA0000000000000000000023 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA0000000000000000000051 /* WidgetKit.framework in Frameworks */,
+				AA0000000000000000000053 /* SwiftUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CE1FB8B922F4147400ADC538 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -49,10 +82,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA0000000000000000000010 /* CalendarWidget */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000011 /* CalendarWidget.swift */,
+				AA0000000000000000000014 /* Assets.xcassets */,
+				AA0000000000000000000013 /* Info.plist */,
+			);
+			path = CalendarWidget;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000060 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000050 /* WidgetKit.framework */,
+				AA0000000000000000000052 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CE1FB8B322F4147400ADC538 = {
 			isa = PBXGroup;
 			children = (
 				CE1FB8BE22F4147400ADC538 /* Tasks_SwiftUI */,
+				AA0000000000000000000010 /* CalendarWidget */,
+				AA0000000000000000000060 /* Frameworks */,
 				CE1FB8BD22F4147400ADC538 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				CE1FB8BC22F4147400ADC538 /* Tasks.app */,
+				AA0000000000000000000021 /* CalendarWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,11 +123,9 @@
 		CE1FB8BE22F4147400ADC538 /* Tasks_SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				CEAF7BCC230CD97600E4828F /* Supporting Files */,
-				CEAF7BCB230CD8F500E4828F /* Model */,
+				AA0000000000000000000001 /* App.swift */,
 				CEAF7BC9230CD8BF00E4828F /* View */,
-				CEAF7BCA230CD8D600E4828F /* Resources */,
-				CEAF7BC7230CD87700E4828F /* Extensions */,
+				CEAF7BCC230CD97600E4828F /* Supporting Files */,
 				CE1FB8CA22F4147900ADC538 /* Preview Content */,
 			);
 			path = Tasks_SwiftUI;
@@ -86,46 +139,18 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		CEAF7BC7230CD87700E4828F /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				CE1FB8DA22F4197600ADC538 /* Date+Extensions.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		CEAF7BC9230CD8BF00E4828F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CE1FB8C622F4147400ADC538 /* HomeTasksView.swift */,
-				CE1FB8D822F4177F00ADC538 /* TaskRow.swift */,
-				CE1FB8DC22F419A400ADC538 /* AddNewToDoTaskHeaderView.swift */,
+				AA0000000000000000000003 /* ContentView.swift */,
+				AA0000000000000000000005 /* CalendarView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		CEAF7BCA230CD8D600E4828F /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				CE2F880D22F9868300F0A4D9 /* Swift.png */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		CEAF7BCB230CD8F500E4828F /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				CE1FB8C322F4147400ADC538 /* Tasks_SwiftUI.xcdatamodeld */,
-				CE1FB8D622F414F600ADC538 /* ToDo.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		CEAF7BCC230CD97600E4828F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CE1FB8BF22F4147400ADC538 /* AppDelegate.swift */,
-				CE1FB8C122F4147400ADC538 /* SceneDelegate.swift */,
 				CE1FB8C822F4147900ADC538 /* Assets.xcassets */,
 				CE1FB8CD22F4147900ADC538 /* LaunchScreen.storyboard */,
 				CE1FB8D022F4147900ADC538 /* Info.plist */,
@@ -136,6 +161,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		AA0000000000000000000020 /* CalendarWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA0000000000000000000025 /* Build configuration list for PBXNativeTarget "CalendarWidgetExtension" */;
+			buildPhases = (
+				AA0000000000000000000022 /* Sources */,
+				AA0000000000000000000023 /* Frameworks */,
+				AA0000000000000000000024 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CalendarWidgetExtension;
+			productName = CalendarWidgetExtension;
+			productReference = AA0000000000000000000021 /* CalendarWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		CE1FB8BB22F4147400ADC538 /* Tasks_SwiftUI */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE1FB8D322F4147900ADC538 /* Build configuration list for PBXNativeTarget "Tasks_SwiftUI" */;
@@ -143,10 +185,12 @@
 				CE1FB8B822F4147400ADC538 /* Sources */,
 				CE1FB8B922F4147400ADC538 /* Frameworks */,
 				CE1FB8BA22F4147400ADC538 /* Resources */,
+				AA0000000000000000000030 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				AA0000000000000000000040 /* PBXTargetDependency */,
 			);
 			name = Tasks_SwiftUI;
 			productName = Tasks_SwiftUI;
@@ -159,22 +203,26 @@
 		CE1FB8B422F4147400ADC538 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
 				ORGANIZATIONNAME = "";
 				TargetAttributes = {
+					AA0000000000000000000020 = {
+						CreatedOnToolsVersion = 15.0;
+					};
 					CE1FB8BB22F4147400ADC538 = {
 						CreatedOnToolsVersion = 11.0;
 					};
 				};
 			};
 			buildConfigurationList = CE1FB8B722F4147400ADC538 /* Build configuration list for PBXProject "Tasks_SwiftUI" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = CE1FB8B322F4147400ADC538;
 			productRefGroup = CE1FB8BD22F4147400ADC538 /* Products */;
@@ -182,17 +230,25 @@
 			projectRoot = "";
 			targets = (
 				CE1FB8BB22F4147400ADC538 /* Tasks_SwiftUI */,
+				AA0000000000000000000020 /* CalendarWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		AA0000000000000000000024 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA0000000000000000000015 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CE1FB8BA22F4147400ADC538 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				CE1FB8CF22F4147900ADC538 /* LaunchScreen.storyboard in Resources */,
-				CE2F880E22F9868300F0A4D9 /* Swift.png in Resources */,
 				CE1FB8CC22F4147900ADC538 /* Preview Assets.xcassets in Resources */,
 				CE1FB8C922F4147900ADC538 /* Assets.xcassets in Resources */,
 			);
@@ -201,22 +257,34 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		AA0000000000000000000022 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA0000000000000000000012 /* CalendarWidget.swift in Sources */,
+				AA0000000000000000000007 /* CalendarView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CE1FB8B822F4147400ADC538 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE1FB8C522F4147400ADC538 /* Tasks_SwiftUI.xcdatamodeld in Sources */,
-				CE1FB8DD22F419A400ADC538 /* AddNewToDoTaskHeaderView.swift in Sources */,
-				CE1FB8D722F414F600ADC538 /* ToDo.swift in Sources */,
-				CE1FB8DB22F4197600ADC538 /* Date+Extensions.swift in Sources */,
-				CE1FB8C022F4147400ADC538 /* AppDelegate.swift in Sources */,
-				CE1FB8D922F4177F00ADC538 /* TaskRow.swift in Sources */,
-				CE1FB8C722F4147400ADC538 /* HomeTasksView.swift in Sources */,
-				CE1FB8C222F4147400ADC538 /* SceneDelegate.swift in Sources */,
+				AA0000000000000000000002 /* App.swift in Sources */,
+				AA0000000000000000000004 /* ContentView.swift in Sources */,
+				AA0000000000000000000006 /* CalendarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AA0000000000000000000040 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA0000000000000000000020 /* CalendarWidgetExtension */;
+			targetProxy = AA0000000000000000000041 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CE1FB8CD22F4147900ADC538 /* LaunchScreen.storyboard */ = {
@@ -230,6 +298,60 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		AA0000000000000000000026 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UQ634A2945;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = CalendarWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Calendario;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.heptagon.Tasks-SwiftUI.CalendarWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AA0000000000000000000027 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UQ634A2945;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = CalendarWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Calendario;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.heptagon.Tasks-SwiftUI.CalendarWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		CE1FB8D122F4147900ADC538 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -280,7 +402,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -334,7 +456,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -353,6 +475,7 @@
 				DEVELOPMENT_TEAM = UQ634A2945;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Tasks_SwiftUI/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -373,6 +496,7 @@
 				DEVELOPMENT_TEAM = UQ634A2945;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Tasks_SwiftUI/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -387,6 +511,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		AA0000000000000000000025 /* Build configuration list for PBXNativeTarget "CalendarWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA0000000000000000000026 /* Debug */,
+				AA0000000000000000000027 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CE1FB8B722F4147400ADC538 /* Build configuration list for PBXProject "Tasks_SwiftUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -406,19 +539,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		CE1FB8C322F4147400ADC538 /* Tasks_SwiftUI.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				CE1FB8C422F4147400ADC538 /* Tasks_SwiftUI.xcdatamodel */,
-			);
-			currentVersion = CE1FB8C422F4147400ADC538 /* Tasks_SwiftUI.xcdatamodel */;
-			path = Tasks_SwiftUI.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = CE1FB8B422F4147400ADC538 /* Project object */;
 }
