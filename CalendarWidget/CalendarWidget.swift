@@ -155,40 +155,45 @@ struct CalendarWidgetEntryView: View {
     @Environment(\.widgetFamily) var family
     var entry: CalendarEntry
 
+    private static let calendarAppURL = URL(string: "calshow://")!
+
     var body: some View {
-        switch family {
-        case .accessoryCircular:
-            CircularLockView(date: entry.date)
-                .containerBackground(for: .widget) { Color.clear }
-        case .accessoryRectangular:
-            RectangularLockView(date: entry.date)
-                .containerBackground(for: .widget) { Color.clear }
-        case .accessoryInline:
-            InlineLockView(date: entry.date)
-                .containerBackground(for: .widget) { Color.clear }
-        case .systemSmall:
-            SmallCalendarView(date: entry.date, style: entry.mode.calendarStyle)
-                .containerBackground(for: .widget) {
-                    switch entry.mode {
-                    case .automatic:
-                        Color(.systemBackground)
-                    case .minimal:
-                        Color.black
+        Group {
+            switch family {
+            case .accessoryCircular:
+                CircularLockView(date: entry.date)
+                    .containerBackground(for: .widget) { Color.clear }
+            case .accessoryRectangular:
+                RectangularLockView(date: entry.date)
+                    .containerBackground(for: .widget) { Color.clear }
+            case .accessoryInline:
+                InlineLockView(date: entry.date)
+                    .containerBackground(for: .widget) { Color.clear }
+            case .systemSmall:
+                SmallCalendarView(date: entry.date, style: entry.mode.calendarStyle)
+                    .containerBackground(for: .widget) {
+                        switch entry.mode {
+                        case .automatic:
+                            Color(.systemBackground)
+                        case .minimal:
+                            Color.black
+                        }
                     }
-                }
-        default:
-            CalendarView(date: entry.date, style: entry.mode.calendarStyle)
-                .padding(.horizontal, 4)
-                .padding(.vertical, 2)
-                .containerBackground(for: .widget) {
-                    switch entry.mode {
-                    case .automatic:
-                        Color(.systemBackground)
-                    case .minimal:
-                        Color.black
+            default:
+                CalendarView(date: entry.date, style: entry.mode.calendarStyle)
+                    .padding(.horizontal, 4)
+                    .padding(.vertical, 2)
+                    .containerBackground(for: .widget) {
+                        switch entry.mode {
+                        case .automatic:
+                            Color(.systemBackground)
+                        case .minimal:
+                            Color.black
+                        }
                     }
-                }
+            }
         }
+        .widgetURL(Self.calendarAppURL)
     }
 }
 
